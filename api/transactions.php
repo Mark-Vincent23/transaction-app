@@ -78,13 +78,6 @@ switch($method) {
         try {
             $data = json_decode(file_get_contents("php://input"), true);
             
-            // Validate required fields
-            // $requiredFields = ['productID', 'productName', 'amount', 'customerName', 'status', 'transactionDate'];
-            // foreach ($requiredFields as $field) {
-            //     if (!isset($data[$field]) || empty($data[$field])) {
-            //         throw new Exception("Missing required field: $field");
-            //     }
-            // }
             
             // Validate and sanitize input
             $productID = $conn->real_escape_string($data['productID']);
